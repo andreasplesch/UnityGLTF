@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>GLTF</RootNamespace>
     <AssemblyName>GLTFSerialization</AssemblyName>
@@ -6,6 +6,9 @@
 
     <TargetFrameworks>net35;netstandard1.3</TargetFrameworks>
     <TargetFrameworks Condition="'$(MSBuildRuntimeType)' != 'Mono'">$(TargetFrameworks);uap10.0.10586</TargetFrameworks>
+    <!-- point to mono assemblies -->
+    <FrameworkPathOverride>/usr/lib/mono/4.7.1-api</FrameworkPathOverride>
+    <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
 
     <OutputType>Library</OutputType>
 
